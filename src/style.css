@@ -43,10 +43,14 @@ section {
     overflow:hidden;
     cursor:pointer;
     transition:.3s;
+
+    text-decoration:none;
+    color:white;
 }
 
 .game-card:hover{
     transform:translateY(-6px);
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
 }
 
 .game-card img{
@@ -121,8 +125,7 @@ section {
 .accessory-card h3{
     text-align:center;
     margin-top:15px;
-}
-.community{
+}.community{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -156,52 +159,76 @@ section {
 }
 
 .community-card{
+
+    display:block;
+
     width:260px;
+
     background:#20242d;
+
     border-radius:12px;
-    padding:25px;
+
+    padding:28px;
+
+    text-decoration:none;
+
+    color:white;
+
     transition:.3s;
 }
 
 .community-card:hover{
+
     transform:translateY(-8px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 .community-card h3{
+
     margin-bottom:15px;
 }
 
 .community-card p{
-    color:#ccc;
-    margin-bottom:15px;
+
+    color:#b8b8b8;
+
+    margin-bottom:25px;
 }
 
-.rating{
-    color:gold;
-    font-size:20px;
-    margin-bottom:10px;
-}
+.community-number{
 
-.community-card span{
-    font-size:1.3rem;
+    display:block;
+
+    font-size:2rem;
+
     font-weight:bold;
+
+    color:#66c0f4;
 }
 
-.community-card button{
-    margin-top:20px;
-    padding:10px 18px;
-    border:none;
-    border-radius:8px;
-    background:#66c0f4;
-    color:white;
-    cursor:pointer;
+.community-card small{
+
+    color:#999;
+
+    display:block;
+
+    margin-bottom:25px;
+}
+
+.community-link{
+
+    color:#66c0f4;
+
+    font-weight:bold;
+
     transition:.3s;
 }
 
-.community-card button:hover{
-    background:#4bace8;
-}
+.community-card:hover .community-link{
 
+    transform:translateX(8px);
+}
 .support{
     text-align:center;
 }
@@ -224,28 +251,87 @@ section {
 }
 
 .support-card{
+
+    display:block;
+
     width:260px;
+
     background:#20242d;
+
     border-radius:12px;
-    padding:30px;
+
+    padding:35px;
+
+    text-decoration:none;
+
+    color:white;
+
     transition:.3s;
 }
 
 .support-card:hover{
+
     transform:translateY(-8px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 .icon{
-    font-size:3rem;
-    margin-bottom:20px;
+
+    width:80px;
+    height:80px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:2px solid #66c0f4;
+
+    border-radius:14px;
+
+    color:#66c0f4;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
 }
 
 .support-card h3{
+
     margin-bottom:15px;
+
+    color:white;
 }
 
 .support-card p{
-    color:#ccc;
+
+    color:#b8b8b8;
+
+    min-height:55px;
+}
+
+.learn-more{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:#66c0f4;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.support-card:hover .learn-more{
+
+    transform:translateX(8px);
 }
 
 .games h2{
@@ -258,6 +344,27 @@ section {
     margin-top:15px;
     text-align:center;
     font-size:18px;
+}
+
+.deck{
+    display:block;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.deck img{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    transition:.35s;
+}
+
+.deck:hover img{
+    transform:scale(1.03);
+}
+
+.deck:hover{
+    box-shadow:0 0 25px rgba(102,192,244,.35);
 }
 
 html{

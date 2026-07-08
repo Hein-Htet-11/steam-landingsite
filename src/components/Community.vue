@@ -1,4 +1,24 @@
+<script setup>
+const communities = [
+  {
+    title: "Steam Reviews",
+    text: "Read millions of reviews from players around the world.",
+    stat: "30M+",
+    label: "Reviews",
+    link: "https://store.steampowered.com/reviews/"
+  },
+  {
+    title: "Steam Community",
+    text: "Join discussions, share screenshots and connect with players.",
+    stat: "100M+",
+    label: "Members",
+    link: "https://steamcommunity.com/"
+  }
+]
+</script>
+
 <template>
+
 <section class="community" id="community">
 
     <div class="community-info">
@@ -19,31 +39,36 @@
 
     <div class="community-cards">
 
-        <div class="community-card">
+        <a
+            class="community-card"
+            v-for="item in communities"
+            :key="item.title"
+            :href="item.link"
+            target="_blank"
+        >
 
-            <h3>⭐ Reviews</h3>
+            <h3>{{ item.title }}</h3>
 
-            <p>Read reviews from players around the world.</p>
+            <p>{{ item.text }}</p>
 
-            <div class="rating">
-                ★★★★★
+            <span class="community-number">
+                {{ item.stat }}
+            </span>
+
+            <small>{{ item.label }}</small>
+
+            <div class="community-link">
+                Visit →
             </div>
 
-            <span>4.5 / 5</span>
-
-        </div>
-
-        <div class="community-card">
-
-            <h3>👥 Friends</h3>
-
-            <p>Add friends and play together anytime.</p>
-
-            <button>Add Friends</button>
-
-        </div>
+        </a>
 
     </div>
 
 </section>
+
 </template>
+
+<style scoped>
+
+</style>

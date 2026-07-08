@@ -2,15 +2,18 @@
 const accessories = [
   {
     title: "Steam Deck",
-    image: "images/steamdeck.jpg"
+    image: "images/steamdeck.jpg",
+    link: "https://store.steampowered.com/steamdeck/"
   },
   {
     title: "Steam Gift Card",
-    image: "images/giftcard.png"
+    image: "images/giftcard.png",
+    link: "https://store.steampowered.com/digitalgiftcards/"
   },
   {
     title: "Steam Controller",
-    image: "images/controller.jpg"
+    image: "images/controller.jpg",
+    link: "https://store.steampowered.com/hardware/"
   }
 ]
 </script>
@@ -20,23 +23,34 @@ const accessories = [
 
     <h2>アクセサリー</h2>
 
-    <div class="deck">
-        <img src="/images/steamdeck.jpg" alt="Steam Deck">
-    </div>
+<a
+    class="deck"
+    :href="accessories[0].link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <img
+        :src="accessories[0].image"
+        :alt="accessories[0].title"
+    >
+</a>
 
     <div class="accessory-grid">
 
-        <div
-            class="accessory-card"
-            v-for="item in accessories.slice(1)"
-            :key="item.title"
-        >
-            <img :src="item.image" :alt="item.title">
+        <a
+    class="accessory-card"
+    v-for="item in accessories.slice(1)"
+    :key="item.title"
+    :href="item.link"
+    target="_blank"
+    rel="noopener noreferrer"
+>
 
-            <h3>{{ item.title }}</h3>
+    <img :src="item.image" :alt="item.title">
 
-        </div>
+    <h3>{{ item.title }}</h3>
 
+</a>
     </div>
 
 </section>

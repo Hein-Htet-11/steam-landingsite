@@ -1,3 +1,26 @@
+<script setup>
+const supports = [
+  {
+    icon: "FAQ",
+    title: "FAQ",
+    text: "Find answers to common questions.",
+    url: "https://help.steampowered.com/"
+  },
+  {
+    icon: "CONTACT",
+    title: "Contact Us",
+    text: "Reach our support team anytime.",
+    url: "https://help.steampowered.com/"
+  },
+  {
+    icon: "FORUM",
+    title: "Community Help",
+    text: "Ask other Steam players for help.",
+    url: "https://steamcommunity.com/discussions/"
+  }
+]
+</script>
+
 <template>
 <section class="support" id="support">
 
@@ -9,23 +32,27 @@
 
     <div class="support-grid">
 
-        <div class="support-card">
-            <div class="icon">❓</div>
-            <h3>FAQ</h3>
-            <p>Find answers to common questions.</p>
-        </div>
+        <a
+    v-for="item in supports"
+    :key="item.title"
+    :href="item.url"
+    target="_blank"
+    class="support-card"
+>
 
-        <div class="support-card">
-            <div class="icon">📧</div>
-            <h3>Contact Us</h3>
-            <p>Reach our support team anytime.</p>
-        </div>
+    <div class="icon">
+        {{ item.icon }}
+    </div>
 
-        <div class="support-card">
-            <div class="icon">💬</div>
-            <h3>Community Help</h3>
-            <p>Ask other Steam players for help.</p>
-        </div>
+    <h3>{{ item.title }}</h3>
+
+    <p>{{ item.text }}</p>
+
+    <span class="learn-more">
+        Learn More →
+    </span>
+
+</a>
 
     </div>
 
