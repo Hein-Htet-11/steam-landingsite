@@ -1,5 +1,26 @@
-# Vue 3 + Vite
+# Steam Landing Page
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A Steam-inspired landing page built with Vue 3 and Vite.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Features
+
+- Component-based architecture
+- Responsive layout
+- Hero section
+- Game showcase
+- Accessories section
+- Community section
+- Support section
+
+## Tech Stack
+
+- Vue 3
+- Vite
+- HTML5
+- CSS3
+
+## Purpose
+
+This project was created as a frontend practice project while learning Vue.js.
+
+also can test the site on https://users2.kyoto-kcg.ac.jp/~st052585/index.html
