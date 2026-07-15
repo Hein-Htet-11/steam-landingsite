@@ -9,9 +9,9 @@ const supports = [
   {
     icon: "CONTACT",
     title: "Contact Us",
-    text: "Reach our support team anytime.",
-    url: "https://help.steampowered.com/"
-  },
+    text: "Send us your questions or feedback.",
+    url: "#contact"
+},
   {
     icon: "FORUM",
     title: "Community Help",
@@ -32,11 +32,11 @@ const supports = [
 
     <div class="support-grid">
 
-        <a
+    <a
     v-for="item in supports"
     :key="item.title"
     :href="item.url"
-    target="_blank"
+    :target="item.url.startsWith('http') ? '_blank' : null"
     class="support-card"
 >
 
