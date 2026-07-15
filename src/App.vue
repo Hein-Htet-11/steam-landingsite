@@ -8,6 +8,7 @@ import Community from './components/Community.vue'
 import Support from './components/Support.vue' 
 import Footer from './components/Footer.vue'
 import Contact from './components/Contact.vue'
+import SteamInfo from './components/SteamInfo.vue'
 </script>
 
 <template>
@@ -23,9 +24,15 @@ import Contact from './components/Contact.vue'
 
   <hr class="divider">
 
-  <Support />
+<Support />
 
-  <Contact/>
+<hr class="divider">
 
-  <Footer />
+<SteamInfo />
+
+<hr class="divider">
+
+<Contact />
+
+<Footer />
 </template>
